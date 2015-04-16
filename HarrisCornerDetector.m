@@ -7,17 +7,17 @@ Y = Y(:,:,1);
 
 %Ix = conv2(double(Y), dx, 'same');   
 %Iy = conv2(double(Y), dy, 'same'); 
-Ix = imfilter(double(Y), dx, 'symmetric');
-Iy = imfilter(double(Y), dy, 'symmetric');  
+Ix = imfilter(double(Y), dx, 'replicate', 'conv');
+Iy = imfilter(double(Y), dy, 'replicate', 'conv');  
 
 Ix2 = Ix.*Ix;
 Iy2 = Iy.*Iy;
 Ixy = Ix.*Iy;
 
 G = fspecial('gaussian', fix(sigma*6), sigma);
-Sx2 = imfilter(Ix2,G, 'symmetric', 'conv');
-Sy2 = imfilter(Iy2,G, 'symmetric', 'conv');
-Sxy = imfilter(Ixy,G, 'symmetric', 'conv');
+Sx2 = imfilter(Ix2,G, 'replicate', 'conv');
+Sy2 = imfilter(Iy2,G, 'replicate', 'conv');
+Sxy = imfilter(Ixy,G, 'replicate', 'conv');
 
 
 

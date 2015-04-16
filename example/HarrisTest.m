@@ -2,10 +2,10 @@
 clc;clear;close all;
 
 
-path =  'TestImage\csie\IMG_8709.JPG';
-I = imread(path);
+Path =  '..\TestImage\csie\IMG_8709.JPG';
+I = imread(Path);
 
-sigma = 10; threshold = 1e+5; k =0.04; localRadius=3;
+sigma = 3; threshold = 3*1e+6; k =0.04; localRadius=3;
 
 radius = 10, disp =10, thresh =1000;
 
