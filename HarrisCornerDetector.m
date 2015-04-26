@@ -1,6 +1,6 @@
 function Corner = HarrisCornerDetector(I, sigma, k, threshold, localRadius)
 
-dy = fspecial('prewitt')
+dy = fspecial('prewitt');
 dx = dy';
 Y = rgb2ycbcr(I);
 Y = Y(:,:,1);
