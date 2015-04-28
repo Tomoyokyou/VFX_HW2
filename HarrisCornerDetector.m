@@ -1,4 +1,4 @@
-function Corner = HarrisCornerDetector(I, sigma, k, threshold, localRadius)
+function Corner = HarrisCornerDetector(I, sigma, k, threshold, localRadius, margin)
 
 dy = fspecial('prewitt');
 dx = dy';
@@ -22,7 +22,7 @@ Sxy = imfilter(Ixy,G, 'replicate', 'conv');
 
 
 M = [Sx2, Sxy ; Sxy, Sy2];
-R = (Sx2.*Sy2-Sxy.*Sxy) - k*(Sx2+Sy2);
+R = (Sx2.*Sy2-Sxy.*Sxy) - k*(Sx2+Sy2).^2;
 
 %Find local maxima
 localSize = 2*localRadius+1;
@@ -30,6 +30,9 @@ localMax = ordfilt2(R,localSize^2,ones(localSize)); % Grey-scale dilate.
 %R = (R==localMax)&(R>threshold);  
 
 
-[Corner.r Corner.c] = find(R>threshold&R==localMax);
+[tempCorner.r tempCorner.c] = find(R>threshold&R==localMax);
 
+Index = find(tempCorner.r<(size(I,1)-40)&tempCorner.r>40&tempCorner.c<(size(I,2)-40)&tempCorner.c>40);
 
+Corner.r = tempCorner.r(Index(:));
+Corner.c = tempCorner.c(Index(:));

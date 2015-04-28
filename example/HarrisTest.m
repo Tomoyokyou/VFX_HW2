@@ -30,7 +30,7 @@ plot(Corner.c, Corner.r, 'r*');
 hold off;
 
 tic;
-HarrisDiscriptor = BuildHarrisDiscriptor(Corner, I);
+HarrisDiscriptor = BuildHarrisDescriptor(Corner, I);
 display('BuildHarrisDiscriptor run time is :');
 toc;
 %[cim, r, c] = HarrisSampleCode(Y, sigma, thresh, radius, disp);
