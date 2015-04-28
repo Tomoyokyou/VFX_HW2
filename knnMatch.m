@@ -1,4 +1,4 @@
-function [ point_matched ] = knnMatch( imgFeature_1, imgFeature_2, matchNum )
+function [ point_matched distance ] = knnMatch( imgFeature_1, imgFeature_2, matchNum )
 if matchNum>size(imgFeature_1,1)*size(imgFeature_2,1)
     matchNum = size(imgFeature_1,1)*size(imgFeature_2,1);
 end
