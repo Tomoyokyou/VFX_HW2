@@ -8,13 +8,15 @@ HarrisDiscriptor = zeros(size(Corner.r, 1), 11);
 HarrisDiscriptor(:,1) = Corner.r;
 HarrisDiscriptor(:,2) = Corner.c;
 
-index = Corner.r.*(Corner.c-1)+Corner.r;
+index = size(I,1).*(Corner.c-1)+Corner.r;
 Max = size(I,1)*size(I,2);
 
 for i = 1:9
 	
+	tempRow = mod(index, size(I,1));
+	tempRow(find(tempRow==0)) = size(I,1);
 	
-	tempRow = mod(index, size(I,1)+1) + floor(i/3)-1;
+	tempRow = tempRow + ceil(i/3)-2;
 	tempCol = ceil(index./size(I,1)) + mod(i,3)-2;
 	
 	wrongIndex = find(tempRow>size(I,1));

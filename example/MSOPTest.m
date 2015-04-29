@@ -6,11 +6,12 @@ Path =  '..\TestImage\csie\IMG_8709.JPG';
 I = imread(Path);
 
 %% Parameter Settings:
-sigma = 1.5; threshold = 10; k =0.04; localRadius=3;
+sigma = 1.5; sigma_smooth = 1; threshold = 10; k =0.04; localRadius=3;
+mode = 'Strongest'; keypointNum = 100;
 
 
 tic;
-Corner = MSOPCornerDetector(I, sigma, k, threshold,localRadius);
+Corner = MSOPCornerDetector(I, sigma, sigma_smooth, k, threshold, localRadius, keypointNum, mode);
 display('MSOPCornerDetector run time is :');
 toc;
 figure(2),imshow(I);

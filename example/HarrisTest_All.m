@@ -2,18 +2,18 @@
 clc;clear;close all;
 
 addpath('..\..\VFX_HW2');
-Path1 =  '..\TestImage\csie\IMG_8709.jpg';
-Path2 =  '..\TestImage\csie\IMG_8710.jpg';
+Path1 =  '..\TestImage\parrington\prtn10.jpg';
+Path2 =  '..\TestImage\parrington\prtn11.jpg';
 
 I_in_1 = imread(Path1);
 I_in_2 = imread(Path2);
 
 
 %% Parameter Settings:
-sigma = 1.5; threshold = 3*1e+6; k =0.04; localRadius=5;
+sigma = 1.5; threshold = 5*1e+6; k =0.04; localRadius= 3;
 
-focalLength = 2100;
-img_cyl_shift = 20;
+focalLength = 706;
+img_cyl_shift = 10;
 
 
 tic;
@@ -24,7 +24,7 @@ toc;
 figure; imshow(I_1);
 
 %Harris
-margin = 40;
+margin = 13;
 
 tic;
 Corner_1 = HarrisCornerDetector(I_1, sigma, k, threshold, localRadius, margin);
@@ -51,7 +51,7 @@ toc;
 figure;imshow(I_2);
 
 tic;
-Corner_2 = HarrisCornerDetector(I_2, sigma, k, threshold, localRadius);
+Corner_2 = HarrisCornerDetector(I_2, sigma, k, threshold, localRadius, margin);
 display('HarrisCornerDetector run time is :');
 toc;
 figure;imshow(I_2);
@@ -61,20 +61,32 @@ plot(Corner_2.c, Corner_2.r, 'r*');
 hold off;
 
 tic;
-HarrisDiscriptor_2 = BuildHarrisDescriptor(Corner_2, I_1);
+HarrisDiscriptor_2 = BuildHarrisDescriptor(Corner_2, I_2);
 display('BuildHarrisDiscriptor run time is :');
 toc;
 
 %knn
-matchNum = 50;
-[ point_matched ] = knnMatch( HarrisDiscriptor_1, HarrisDiscriptor_2, matchNum );
+matchNum = 30;	
+[ point_matched distance ] = knnMatch( HarrisDiscriptor_1, HarrisDiscriptor_2, matchNum );
 
 %RANSAC
-threshold = 100;
-maxIter = 50;
+threshold = 5;
+maxIter = 5000;
 [ vector_result inlierNum ] = RANSAC( point_matched, maxIter, threshold );
 %align
 [ img_result ] = alignImg( I_1, I_2, vector_result );
 
 figure();imshow(img_result);
 
+
+%%For debug
+
+figure();imshow(I_1);
+hold on;
+plot(point_matched(:,2), point_matched(:,1), 'r*');
+hold off;
+
+figure();imshow(I_2);
+hold on;
+plot(point_matched(:,4), point_matched(:,3), 'r*');
+hold off;
