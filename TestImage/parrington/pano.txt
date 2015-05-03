@@ -1,234 +1,234 @@
-C:\Users\queemie\VFX_HW2\TestImage\parrington\prtn01.jpg
+C:\Users\Lifeislikeamelody\gitHub\VFX_HW2\TestImage\parrington\prtn01.jpg
 384 512
 
 1 0 255.5 
 0 1 191.5 
 0 0 1 
 
-0.999743 0.0177755 0.0140283 
--0.0177738 0.999842 -0.000249541 
--0.0140305 -2.96402e-008 0.999901 
+0.999748 0.0178156 0.0136541 
+-0.017814 0.999841 -0.000243572 
+-0.0136563 4.16569e-008 0.999907 
 
-706.469
+706.456
 
-C:\Users\queemie\VFX_HW2\TestImage\parrington\prtn02.jpg
+C:\Users\Lifeislikeamelody\gitHub\VFX_HW2\TestImage\parrington\prtn02.jpg
 384 512
 
 1 0 255.5 
 0 1 191.5 
 0 0 1 
 
-0.999739 0.0125568 0.0190934 
--0.0183017 0.940279 0.339913 
--0.0136849 -0.340174 0.940263 
+0.999741 0.0128515 0.0187626 
+-0.0184666 0.940272 0.339922 
+-0.0132734 -0.340181 0.940266 
 
-706.038
+705.899
 
-C:\Users\queemie\VFX_HW2\TestImage\parrington\prtn03.jpg
+C:\Users\Lifeislikeamelody\gitHub\VFX_HW2\TestImage\parrington\prtn03.jpg
 384 512
 
 1 0 255.5 
 0 1 191.5 
 0 0 1 
 
-0.999754 0.0047948 0.0216509 
--0.0174794 0.771213 0.636337 
--0.0136463 -0.636559 0.771107 
+0.99976 0.00505635 0.0213033 
+-0.0174608 0.771163 0.636399 
+-0.0132104 -0.636618 0.771066 
 
-706.833
+706.702
 
-C:\Users\queemie\VFX_HW2\TestImage\parrington\prtn04.jpg
+C:\Users\Lifeislikeamelody\gitHub\VFX_HW2\TestImage\parrington\prtn04.jpg
 384 512
 
 1 0 255.5 
 0 1 191.5 
 0 0 1 
 
-0.999772 -0.00329792 0.0211093 
--0.0166016 0.502002 0.864707 
--0.0134487 -0.86486 0.501833 
+0.99978 -0.00303489 0.0207724 
+-0.0164442 0.50187 0.864787 
+-0.0130495 -0.864938 0.501709 
 
-706.808
+706.647
 
-C:\Users\queemie\VFX_HW2\TestImage\parrington\prtn05.jpg
+C:\Users\Lifeislikeamelody\gitHub\VFX_HW2\TestImage\parrington\prtn05.jpg
 384 512
 
 1 0 255.5 
 0 1 191.5 
 0 0 1 
 
-0.999764 -0.0107146 0.0188852 
--0.0166196 0.1821 0.98314 
--0.013973 -0.983222 0.181879 
+0.999771 -0.0103915 0.0187116 
+-0.0165101 0.181927 0.983173 
+-0.0136208 -0.983257 0.181714 
 
-705.696
+705.569
 
-C:\Users\queemie\VFX_HW2\TestImage\parrington\prtn06.jpg
+C:\Users\Lifeislikeamelody\gitHub\VFX_HW2\TestImage\parrington\prtn06.jpg
 384 512
 
 1 0 255.5 
 0 1 191.5 
 0 0 1 
 
-0.999739 -0.0167935 0.0154589 
--0.0181366 -0.173245 0.984712 
--0.0138586 -0.984735 -0.173504 
+0.999741 -0.0164598 0.0156889 
+-0.0183063 -0.173319 0.984696 
+-0.0134887 -0.984728 -0.173576 
 
-705.358
+705.229
 
-C:\Users\queemie\VFX_HW2\TestImage\parrington\prtn07.jpg
+C:\Users\Lifeislikeamelody\gitHub\VFX_HW2\TestImage\parrington\prtn07.jpg
 384 512
 
 1 0 255.5 
 0 1 191.5 
 0 0 1 
 
-0.999756 -0.0203695 0.00853718 
--0.017509 -0.495355 0.868514 
--0.0134622 -0.868452 -0.495591 
+0.999761 -0.0200241 0.0087317 
+-0.0175091 -0.495512 0.868425 
+-0.0130627 -0.86837 -0.495744 
 
-704.723
+704.601
 
-C:\Users\queemie\VFX_HW2\TestImage\parrington\prtn08.jpg
+C:\Users\Lifeislikeamelody\gitHub\VFX_HW2\TestImage\parrington\prtn08.jpg
 384 512
 
 1 0 255.5 
 0 1 191.5 
 0 0 1 
 
-0.999765 -0.021667 0.000442477 
--0.016862 -0.764898 0.643931 
--0.0136136 -0.643787 -0.765083 
+0.999771 -0.0213925 0.000719815 
+-0.0168334 -0.765043 0.643759 
+-0.0132209 -0.643624 -0.765228 
 
-703.822
+703.708
 
-C:\Users\queemie\VFX_HW2\TestImage\parrington\prtn09.jpg
+C:\Users\Lifeislikeamelody\gitHub\VFX_HW2\TestImage\parrington\prtn09.jpg
 384 512
 
 1 0 255.5 
 0 1 191.5 
 0 0 1 
 
-0.999734 -0.0222154 -0.0060973 
--0.0187799 -0.939217 0.342811 
--0.0133423 -0.342606 -0.939385 
+0.99974 -0.0220418 -0.00576175 
+-0.0187353 -0.939312 0.342552 
+-0.0129625 -0.342355 -0.939481 
 
-704.344
+704.222
 
-C:\Users\queemie\VFX_HW2\TestImage\parrington\prtn10.jpg
+C:\Users\Lifeislikeamelody\gitHub\VFX_HW2\TestImage\parrington\prtn10.jpg
 384 512
 
 1 0 255.5 
 0 1 191.5 
 0 0 1 
 
-0.999715 -0.0202222 -0.0126994 
--0.0201267 -0.999768 0.00760757 
--0.0128503 -0.00734959 -0.99989 
+0.999718 -0.0202703 -0.0123333 
+-0.0201816 -0.99977 0.0072756 
+-0.0124779 -0.00702423 -0.999898 
 
-704.697
+704.552
 
-C:\Users\queemie\VFX_HW2\TestImage\parrington\prtn11.jpg
+C:\Users\Lifeislikeamelody\gitHub\VFX_HW2\TestImage\parrington\prtn11.jpg
 384 512
 
 1 0 255.5 
 0 1 191.5 
 0 0 1 
 
-0.999826 -0.00851104 -0.0166011 
--0.0136779 -0.939575 -0.342069 
--0.0126866 0.342237 -0.939528 
+0.999829 -0.00871383 -0.0162451 
+-0.0137508 -0.939457 -0.342391 
+-0.0122781 0.342556 -0.939417 
 
-703.769
+703.76
 
-C:\Users\queemie\VFX_HW2\TestImage\parrington\prtn12.jpg
+C:\Users\Lifeislikeamelody\gitHub\VFX_HW2\TestImage\parrington\prtn12.jpg
 384 512
 
 1 0 255.5 
 0 1 191.5 
 0 0 1 
 
-0.999781 -0.00351665 -0.0206224 
--0.0159759 -0.764768 -0.644108 
--0.0135063 0.644296 -0.764656 
+0.999787 -0.00374353 -0.020277 
+-0.0159308 -0.764573 -0.64434 
+-0.0130912 0.644526 -0.76447 
 
-704.176
+704.202
 
-C:\Users\queemie\VFX_HW2\TestImage\parrington\prtn13.jpg
+C:\Users\Lifeislikeamelody\gitHub\VFX_HW2\TestImage\parrington\prtn13.jpg
 384 512
 
 1 0 255.5 
 0 1 191.5 
 0 0 1 
 
-0.999774 0.00388351 -0.0208954 
--0.0160898 -0.504054 -0.863522 
--0.013886 0.863663 -0.503878 
+0.999779 0.0035795 -0.0206699 
+-0.0160527 -0.503773 -0.863686 
+-0.0135046 0.863828 -0.503604 
 
-704.648
+704.612
 
-C:\Users\queemie\VFX_HW2\TestImage\parrington\prtn14.jpg
+C:\Users\Lifeislikeamelody\gitHub\VFX_HW2\TestImage\parrington\prtn14.jpg
 384 512
 
 1 0 255.5 
 0 1 191.5 
 0 0 1 
 
-0.999728 0.0106655 -0.0207542 
--0.0186136 -0.171878 -0.984942 
--0.0140721 0.98506 -0.171632 
+0.99973 0.0102685 -0.0208083 
+-0.0187385 -0.171633 -0.984982 
+-0.0136857 0.985107 -0.171394 
 
-704.783
+704.785
 
-C:\Users\queemie\VFX_HW2\TestImage\parrington\prtn15.jpg
+C:\Users\Lifeislikeamelody\gitHub\VFX_HW2\TestImage\parrington\prtn15.jpg
 384 512
 
 1 0 255.5 
 0 1 191.5 
 0 0 1 
 
-0.999731 0.0165118 -0.016251 
--0.0188868 0.174627 -0.984453 
--0.0134172 0.984496 0.174892 
+0.999735 0.0161092 -0.0164017 
+-0.0189676 0.174837 -0.984415 
+-0.0129906 0.984465 0.175096 
 
-704.471
+704.479
 
-C:\Users\queemie\VFX_HW2\TestImage\parrington\prtn16.jpg
+C:\Users\Lifeislikeamelody\gitHub\VFX_HW2\TestImage\parrington\prtn16.jpg
 384 512
 
 1 0 255.5 
 0 1 191.5 
 0 0 1 
 
-0.999729 0.0208748 -0.0102817 
--0.0192991 0.496958 -0.86756 
--0.0130006 0.867523 0.497227 
+0.999737 0.0204565 -0.0103713 
+-0.0191718 0.497159 -0.867447 
+-0.0125888 0.867418 0.497421 
 
-705.068
+705.05
 
-C:\Users\queemie\VFX_HW2\TestImage\parrington\prtn17.jpg
+C:\Users\Lifeislikeamelody\gitHub\VFX_HW2\TestImage\parrington\prtn17.jpg
 384 512
 
 1 0 255.5 
 0 1 191.5 
 0 0 1 
 
-0.999755 0.0220637 -0.00193894 
--0.0182358 0.77029 -0.637433 
--0.0125706 0.637312 0.770503 
+0.999766 0.0215561 -0.00191759 
+-0.0178344 0.770465 -0.637233 
+-0.0122588 0.637117 0.770669 
 
-705.544
+705.49
 
-C:\Users\queemie\VFX_HW2\TestImage\parrington\prtn00.jpg
+C:\Users\Lifeislikeamelody\gitHub\VFX_HW2\TestImage\parrington\prtn00.jpg
 384 512
 
 1 0 255.5 
 0 1 191.5 
 0 0 1 
 
-0.999829 0.0166193 0.00806302 
--0.0128697 0.939853 -0.341337 
--0.0132509 0.341175 0.939906 
+0.999829 0.0168381 0.00766154 
+-0.0132136 0.939881 -0.341247 
+-0.0129469 0.341087 0.939942 
 
 704.968
 
