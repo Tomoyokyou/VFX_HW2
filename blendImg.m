@@ -44,6 +44,9 @@ else %poisson
     weight_blendpatch_shrinked = zeros(size(tempImg_1,1),size(tempImg_1,2),3);
     for i=1:(cor_overlap(2)-cor_overlap(1)+1)
         for j=1:(cor_overlap(4)-cor_overlap(3)+1)
+            if (cor_overlap(1)+i-1+corShift_row-2)<1 | (cor_overlap(1)+i-1+corShift_row+2)>size(weight_blendpatch,1) | (cor_overlap(3)+j-1+corShift_column-2)<1 | (cor_overlap(3)+j-1+corShift_column+2)>size(weight_blendpatch,2)
+                continue;
+            end
             if weight_blendpatch((cor_overlap(1)+i-1+corShift_row-2):(cor_overlap(1)+i-1+corShift_row+2),(cor_overlap(3)+j-1+corShift_column-2):(cor_overlap(3)+j-1+corShift_column+2),:)==ones(5,5,3)
                 weight_blendpatch_shrinked(cor_overlap(1)+i-1+corShift_row,cor_overlap(3)+j-1+corShift_column,:) = 1;
             end
