@@ -1,18 +1,13 @@
-function  img_result = stitchTwo(I_in_1, I_in_2, focallength)
+function  img_result = stitchTwo(I_1, I_2)
 
 %% Parameter Settings:
 sigma = 1.5; threshold = 5*1e+6; k =0.04; localRadius= 3;
 
-focalLength = 706;
-img_cyl_shift = 10;
+%focalLength = 2100;
 
 
-tic;
-[ I_1 ] = cylProject( I_in_1, focalLength, img_cyl_shift  );
-display('cylProject run time : ');
-toc;
 
-figure; imshow(I_1);
+
 
 %Harris
 margin = 13;
@@ -21,7 +16,7 @@ tic;
 Corner_1 = HarrisCornerDetector(I_1, sigma, k, threshold, localRadius, margin);
 display('HarrisCornerDetector run time is :');
 toc;
-figure(2),imshow(I_1);
+figure;imshow(I_1);
 
 hold on;
 plot(Corner_1.c, Corner_1.r, 'r*');
@@ -34,12 +29,7 @@ toc;
 
 
 %I2
-tic;
-[ I_2 ] = cylProject( I_in_2, focalLength, img_cyl_shift  );
-display('cylProject run time : ');
-toc;
 
-figure;imshow(I_2);
 
 tic;
 Corner_2 = HarrisCornerDetector(I_2, sigma, k, threshold, localRadius, margin);
@@ -61,7 +51,7 @@ matchNum = 30;
 [ point_matched distance ] = knnMatch( HarrisDiscriptor_1, HarrisDiscriptor_2, matchNum );
 
 %RANSAC
-threshold = 5;
+threshold = 30;
 maxIter = 5000;
 [ vector_result inlierNum ] = RANSAC( point_matched, maxIter, threshold );
 %align
