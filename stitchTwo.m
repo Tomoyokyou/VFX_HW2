@@ -1,13 +1,4 @@
-%Harris Test all
-clc;clear;close all;
-
-addpath('..\..\VFX_HW2');
-Path1 =  '..\TestImage\parrington\prtn10.jpg';
-Path2 =  '..\TestImage\parrington\prtn11.jpg';
-
-I_in_1 = imread(Path1);
-I_in_2 = imread(Path2);
-
+function  img_result = stitchTwo(I_in_1, I_in_2, focallength)
 
 %% Parameter Settings:
 sigma = 1.5; threshold = 5*1e+6; k =0.04; localRadius= 3;
@@ -30,7 +21,7 @@ tic;
 Corner_1 = HarrisCornerDetector(I_1, sigma, k, threshold, localRadius, margin);
 display('HarrisCornerDetector run time is :');
 toc;
-figure;imshow(I_1);
+figure(2),imshow(I_1);
 
 hold on;
 plot(Corner_1.c, Corner_1.r, 'r*');
@@ -80,7 +71,7 @@ figure();imshow(img_result);
 
 
 %%For debug
-
+%{
 figure();imshow(I_1);
 hold on;
 plot(point_matched(:,2), point_matched(:,1), 'r*');
@@ -90,3 +81,4 @@ figure();imshow(I_2);
 hold on;
 plot(point_matched(:,4), point_matched(:,3), 'r*');
 hold off;
+%}
