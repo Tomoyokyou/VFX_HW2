@@ -5,13 +5,13 @@ close all;
 addpath('../../VFX_HW2');
 
 
-image = dir('../TestImage/dataset/4/*.jpg');
-Path = '../TestImage/dataset/4/';
+image = dir('../TestImage/dataset/7/*.jpg');
+Path = '../TestImage/dataset/7/';
 focalLength = 400;
 img_cyl_shift = 20;
 
 imageNum = size(image,1);
-I_out = imread([Path image(1).name]);
+I_out = imread([Path image(2).name]);
 I_out = imresize(I_out, 0.2);
 
 tic;
@@ -34,9 +34,9 @@ for i = 2:imageNum
     display('cylProject run time : ');
     toc;
 
-   figure;imshow(I_2);
+   %figure;imshow(I_2);
     
     
     
-    I_out = stitchTwo_MSOP(I_out, I_2);
+    I_out = stitchTwo_HW2(I_out, I_2,i);
 end

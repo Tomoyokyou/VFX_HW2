@@ -1,4 +1,4 @@
-function  img_result = stitchTwo_MSOP(I_1, I_2)
+function  img_result = stitchTwo_HW2(I_1, I_2, marginMultiple)
 
 %% Parameter Settings:
 sigma = 1.5;  k =0.04; localRadius= 3;
@@ -11,13 +11,19 @@ mode = '';
 
 %focalLength = 2100;
 
-margin.up = 100;
-margin.down = 100;
-margin.left = 100;
-margin.right = 100;
+margin1.up = 300;
+margin1.down = 100;
+margin1.left = 200*(marginMultiple-1);
+margin1.right = 100;
 
 
-Corner_1 = MSOPCornerDetector(I_1, sigma, sigma_smooth, k, threshold, localRadius, keypointNum, margin, mode);
+margin2.up = 300;
+margin2.down = 100;
+margin2.left = 40;
+margin2.right = 150;
+
+
+Corner_1 = MSOPCornerDetector(I_1, sigma, sigma_smooth, k, threshold, localRadius, keypointNum, margin1, mode);
 
 %{
 figure;imshow(I_1);
@@ -33,7 +39,7 @@ MSOPDescriptor_1 = BuildMSOPDescriptor(Corner_1, I_1);
 
 %I2
 
-Corner_2 = MSOPCornerDetector(I_2, sigma, sigma_smooth,k, threshold, localRadius, keypointNum, margin, mode);
+Corner_2 = MSOPCornerDetector(I_2, sigma, sigma_smooth,k, threshold, localRadius, keypointNum, margin2, mode);
 
 %{
 figure;imshow(I_2);
@@ -50,7 +56,7 @@ matchNum = 100;
 [ point_matched distance ] = knnMatch( MSOPDescriptor_1, MSOPDescriptor_2, matchNum );
 
 %RANSAC
-threshold = 20;
+threshold = 10;
 maxIter = 5000;
 [ vector_result inlierNum ] = RANSAC( point_matched, maxIter, threshold );
 %align

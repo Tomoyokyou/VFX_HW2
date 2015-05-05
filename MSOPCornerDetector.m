@@ -54,6 +54,7 @@ switch mode
 		Corner.c = tempCorner.c(Index2(:));
 
 	otherwise
+		R(find(R~=localMax))=0;
 		[tempCorner.r tempCorner.c] = find(R>threshold&R==localMax);
 
 		Index = find(tempCorner.r<(size(I,1)-margin.down)&tempCorner.r>margin.up&tempCorner.c<(size(I,2)-margin.right)&tempCorner.c>margin.left);	
