@@ -38,8 +38,7 @@ localMax = ordfilt2(R,localSize^2,ones(localSize)); % Grey-scale dilate.
 
 
 switch mode
-	case 'ANMS'
-		
+
 	case 'Strongest'
 		R(find(R~=localMax))=0;
 		[R_sort, Index] = sort(R(:),'descend');
