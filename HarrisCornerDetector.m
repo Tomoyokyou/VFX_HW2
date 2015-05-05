@@ -32,7 +32,7 @@ localMax = ordfilt2(R,localSize^2,ones(localSize)); % Grey-scale dilate.
 
 [tempCorner.r tempCorner.c] = find(R>threshold&R==localMax);
 
-Index = find(tempCorner.r<(size(I,1)-40)&tempCorner.r>40&tempCorner.c<(size(I,2)-40)&tempCorner.c>40);
+Index = find(tempCorner.r<(size(I,1)-margin)&tempCorner.r>margin&tempCorner.c<(size(I,2)-margin)&tempCorner.c>margin);
 
 Corner.r = tempCorner.r(Index(:));
 Corner.c = tempCorner.c(Index(:));

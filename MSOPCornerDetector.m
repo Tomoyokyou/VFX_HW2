@@ -1,4 +1,4 @@
-function Corner = MSOPCornerDetector(I, sigma, sigma_smooth,k, threshold, localRadius, keypointNum,mode)
+function Corner = MSOPCornerDetector(I, sigma, sigma_smooth,k, threshold, localRadius, keypointNum, margin, mode)
 
 dy = fspecial('prewitt');
 dx = dy';
@@ -44,8 +44,22 @@ switch mode
 		R(find(R~=localMax))=0;
 		[R_sort, Index] = sort(R(:),'descend');
 		%Corner.r = mod(Index(1:keypointNum),size(I,1));
-		Corner.c = ceil(Index(1:keypointNum)./size(I,1));
-		Corner.r = Index(1:keypointNum) - (Corner.c-1)*size(I,1);
+
+		tempCorner.c = ceil(Index(1:keypointNum)./size(I,1));
+		tempCorner.r = Index(1:keypointNum) - (tempCorner.c-1)*size(I,1);
+
+		Index2 = find(tempCorner.r<(size(I,1)-margin)&tempCorner.r>margin&tempCorner.c<(size(I,2)-margin)&tempCorner.c>margin);	
+
+		Corner.r = tempCorner.r(Index2(:));
+		Corner.c = tempCorner.c(Index2(:));
+
 	otherwise
-	[Corner.r Corner.c] = find(R>threshold&R==localMax);
+		[tempCorner.r tempCorner.c] = find(R>threshold&R==localMax);
+
+		Index = find(tempCorner.r<(size(I,1)-margin)&tempCorner.r>margin&tempCorner.c<(size(I,2)-margin)&tempCorner.c>margin);	
+
+		Corner.r = tempCorner.r(Index(:));
+		Corner.c = tempCorner.c(Index(:));
+
+
 end

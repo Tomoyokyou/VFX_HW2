@@ -1,21 +1,21 @@
-function  img_result = stitchTwo(I_1, I_2)
+function  img_result = stitchTwo_MSOP(I_1, I_2)
 
 %% Parameter Settings:
-sigma = 1.5; threshold = 5*1e+6; k =0.04; localRadius= 3;
+sigma = 1.5;  k =0.04; localRadius= 3;
+
+sigma_smooth = 1; threshold = 10;
+
+keypointNum = 250;
+mode = 'Strongest';
+
 
 %focalLength = 2100;
 
+margin = 25;
 
 
+Corner_1 = MSOPCornerDetector(I_1, sigma, sigma_smooth, k, threshold, localRadius, keypointNum, margin, mode);
 
-
-%Harris
-margin = 13;
-
-tic;
-Corner_1 = HarrisCornerDetector(I_1, sigma, k, threshold, localRadius, margin);
-display('HarrisCornerDetector run time is :');
-toc;
 %{
 figure;imshow(I_1);
 
@@ -23,19 +23,15 @@ hold on;
 plot(Corner_1.c, Corner_1.r, 'r*');
 hold off;
 %}
-tic;
-HarrisDiscriptor_1 = BuildHarrisDescriptor(Corner_1, I_1);
-display('BuildHarrisDiscriptor run time is :');
-toc;
+
+MSOPDescriptor_1 = BuildMSOPDescriptor(Corner_1, I_1);
+
 
 
 %I2
 
+Corner_2 = MSOPCornerDetector(I_2, sigma, sigma_smooth,k, threshold, localRadius, keypointNum, margin, mode);
 
-tic;
-Corner_2 = HarrisCornerDetector(I_2, sigma, k, threshold, localRadius, margin);
-display('HarrisCornerDetector run time is :');
-toc;
 %{
 figure;imshow(I_2);
 
@@ -44,17 +40,14 @@ plot(Corner_2.c, Corner_2.r, 'r*');
 hold off;
 %}
 
-tic;
-HarrisDiscriptor_2 = BuildHarrisDescriptor(Corner_2, I_2);
-display('BuildHarrisDiscriptor run time is :');
-toc;
+MSOPDescriptor_2 = BuildMSOPDescriptor(Corner_2, I_2);
 
 %knn
-matchNum = 30;	
-[ point_matched distance ] = knnMatch( HarrisDiscriptor_1, HarrisDiscriptor_2, matchNum );
+matchNum = 40;	
+[ point_matched distance ] = knnMatch( MSOPDescriptor_1, MSOPDescriptor_2, matchNum );
 
 %RANSAC
-threshold = 30;
+threshold = 20;
 maxIter = 5000;
 [ vector_result inlierNum ] = RANSAC( point_matched, maxIter, threshold );
 %align

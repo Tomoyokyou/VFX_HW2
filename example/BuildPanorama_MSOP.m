@@ -5,7 +5,7 @@ close all;
 addpath('../../VFX_HW2');
 
 
-image = dir('../TestImage/csie/IMG_*.jpg');
+image = dir('../TestImage/csie/IMG*.jpg');
 Path = '../TestImage/csie/';
 focalLength = 2100;
 img_cyl_shift = 10;
@@ -36,5 +36,5 @@ for i = 2:imageNum
     
     
     
-    I_out = stitchTwo(I_out, I_in_2);
+    I_out = stitchTwo_MSOP(I_out, I_in_2);
 end

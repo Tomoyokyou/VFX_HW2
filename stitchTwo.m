@@ -54,7 +54,7 @@ matchNum = 30;
 [ point_matched distance ] = knnMatch( HarrisDiscriptor_1, HarrisDiscriptor_2, matchNum );
 
 %RANSAC
-threshold = 30;
+threshold =30;
 maxIter = 5000;
 [ vector_result inlierNum ] = RANSAC( point_matched, maxIter, threshold );
 %align
