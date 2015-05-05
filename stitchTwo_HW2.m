@@ -11,16 +11,16 @@ mode = '';
 
 %focalLength = 2100;
 
-margin1.up = 300;
+margin1.up = 30;
 margin1.down = 100;
-margin1.left = 200*(marginMultiple-1)*5;
-margin1.right = 40*5;
+margin1.left = 200*(marginMultiple-1);
+margin1.right = 40;
 
 
-margin2.up = 300;
+margin2.up = 30;
 margin2.down = 100;
-margin2.left = 40*5;
-margin2.right = 150*5;
+margin2.left = 40;
+margin2.right = 150;
 
 
 Corner_1 = MSOPCornerDetector(I_1, sigma, sigma_smooth, k, threshold, localRadius, keypointNum, margin1, mode);

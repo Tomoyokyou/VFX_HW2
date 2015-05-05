@@ -12,7 +12,7 @@ img_cyl_shift = 20;
 
 imageNum = size(image,1);
 I_out = imread([Path image(1).name]);
-%I_out = imresize(I_out, 0.2);
+I_out = imresize(I_out, 0.2);
 
 tic;
     [ I_out ] = cylProject( I_out, focalLength, img_cyl_shift  );
@@ -27,7 +27,7 @@ for i = 2:imageNum
     %figure; imshow(I_out);
 	
     I_in_2 = imread([Path image(i).name]);
-%	I_in_2 = imresize(I_in_2, 0.2);
+	I_in_2 = imresize(I_in_2, 0.2);
     
     tic;
     [ I_2 ] = cylProject( I_in_2, focalLength, img_cyl_shift  );
