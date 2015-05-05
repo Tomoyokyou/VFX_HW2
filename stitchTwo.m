@@ -16,12 +16,13 @@ tic;
 Corner_1 = HarrisCornerDetector(I_1, sigma, k, threshold, localRadius, margin);
 display('HarrisCornerDetector run time is :');
 toc;
+%{
 figure;imshow(I_1);
 
 hold on;
 plot(Corner_1.c, Corner_1.r, 'r*');
 hold off;
-
+%}
 tic;
 HarrisDiscriptor_1 = BuildHarrisDescriptor(Corner_1, I_1);
 display('BuildHarrisDiscriptor run time is :');
@@ -35,11 +36,13 @@ tic;
 Corner_2 = HarrisCornerDetector(I_2, sigma, k, threshold, localRadius, margin);
 display('HarrisCornerDetector run time is :');
 toc;
+%{
 figure;imshow(I_2);
 
 hold on;
 plot(Corner_2.c, Corner_2.r, 'r*');
 hold off;
+%}
 
 tic;
 HarrisDiscriptor_2 = BuildHarrisDescriptor(Corner_2, I_2);
