@@ -22,7 +22,7 @@ for i = 2:imageNum
     
     
     i
-    %figure; imshow(I_out);
+    %figure(); imshow(I_out);
 	
     I_in_2 = imread([Path image(i).name]);
 	
@@ -32,9 +32,9 @@ for i = 2:imageNum
     display('cylProject run time : ');
     toc;
 
-   % figure;imshow(I_2);
+   figure();imshow(I_2);
     
     
     
-    I_out = stitchTwo_MSOP(I_out, I_in_2);
+    I_out = stitchTwo_MSOP(I_out, I_2);
 end

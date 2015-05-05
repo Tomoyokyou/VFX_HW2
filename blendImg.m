@@ -24,7 +24,7 @@ for i=1:(cor_overlap(2)-cor_overlap(1)+1)
     end
 end
 img_result_mid = tempImg_1.*weight_1+tempImg_2.*weight_2;
-if 0
+if 1
     img_result = uint8(img_result_mid);
 else %poisson
     %weight_blendpatch

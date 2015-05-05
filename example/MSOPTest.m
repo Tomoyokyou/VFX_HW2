@@ -2,14 +2,14 @@
 clc;clear;close all;
 
 addpath('../../VFX_HW2');
-Path =  '../TestImage/csie/IMG_8709.JPG';
+Path =  '../TestImage/dataset/4/DSC05019.JPG';
 I = imread(Path);
 
 %% Parameter Settings:
 sigma = 1.5; sigma_smooth = 1; threshold = 10; k =0.04; localRadius=3;
 mode = 'Strongest'; keypointNum = 100;
 
-margin = 13;
+margin = 50;
 
 tic;
 Corner = MSOPCornerDetector(I, sigma, sigma_smooth, k, threshold, localRadius, keypointNum, margin,mode);

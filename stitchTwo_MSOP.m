@@ -5,13 +5,13 @@ sigma = 1.5;  k =0.04; localRadius= 3;
 
 sigma_smooth = 1; threshold = 10;
 
-keypointNum = 250;
-mode = 'Strongest';
+keypointNum = 400;
+mode = '';
 
 
 %focalLength = 2100;
 
-margin = 25;
+margin = 100;
 
 
 Corner_1 = MSOPCornerDetector(I_1, sigma, sigma_smooth, k, threshold, localRadius, keypointNum, margin, mode);
@@ -43,7 +43,7 @@ hold off;
 MSOPDescriptor_2 = BuildMSOPDescriptor(Corner_2, I_2);
 
 %knn
-matchNum = 40;	
+matchNum = 100;	
 [ point_matched distance ] = knnMatch( MSOPDescriptor_1, MSOPDescriptor_2, matchNum );
 
 %RANSAC
@@ -57,7 +57,7 @@ figure();imshow(img_result);
 
 
 %%For debug
-%{
+
 figure();imshow(I_1);
 hold on;
 plot(point_matched(:,2), point_matched(:,1), 'r*');
@@ -67,4 +67,3 @@ figure();imshow(I_2);
 hold on;
 plot(point_matched(:,4), point_matched(:,3), 'r*');
 hold off;
-%}
